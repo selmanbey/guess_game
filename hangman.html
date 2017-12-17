@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="hangman.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand|VT323" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <h1>GUESS GAME</h1>
+  </div>
+  <div id="main">
+    <div class="gameon">
+      <div id="word_div">
+        <p id="word_board"></p>
+      </div>
+      <div id="chances_div">
+        <p>Chances Left: <span id="chances_board"></span></p>
+      <input type="text">
+      </div>
+      <div id="notification_div">
+        <p id="notification"></p>
+      </div>
+      <div id="score_div">
+        <p>Current Score: <span class="score_board"></span></p>
+        <p>Best Score So Far: <span class="best_score_board"></span></p>
+      </div>
+    </div>
+    <div class="gamewon">
+      <p>YAY! YOU GOT IT!</p>
+      <p class="word_revealed"></p>
+      <p>Your current score is: <span class="score_board"></span></p>
+      <p>Best Score So Far: <span class="best_score_board"></span></p>
+      <button class="continue">NEXT WORD PLEASE!</button>
+    </div>
+    <div class="gameoff">
+      <p id="gameover">BOO! YOU LOST!</p>
+      <p class="word_revealed"></p>
+      <p>Your score is: <span class="score_board"></span></p>
+      <p>Best Score So Far: <span class="best_score_board"></span></p>
+      <button class="restart">WILL TRY AGAIN!</button>
+    </div>
+  </div>
+</body>
+</html>

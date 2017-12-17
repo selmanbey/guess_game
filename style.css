@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#header {
+  flex: 1;
+  flex-basis: 20%;
+  background-color: black;
+  color: white;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+#main {
+  flex: 2;
+  flex-basis: 80;
+}
+
+.gameon {
+  display: block;
+}
+
+.gamewon {
+  display: none;
+}
+
+.gameoff {
+  display: none;
+}
+
+div {
+  text-align: center;
+}
+
+#word_div {
+
+}
+
+h1 {
+  font-family: 'VT323', monospace;
+}
+
+p {
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+input {
+  font-size: 3em;
+  text-align: center;
+  width: 1em;
+  border: 0.1em solid;
+}
+
+span {
+  font-family: 'Quicksand';
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.score_board {
+  color: black;
+  font-family: 'Quicksand';
+  font-size: 1.5em;
+  font-weight: bold;
+}
