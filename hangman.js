@@ -126,9 +126,8 @@ $('document').ready( function() {
   var chosenWord = randomWord.split("")
   var guessedWord = [];
   var repeatingLetters = [];
-  console.log(randomWord)
   var tip = "\"".concat(hangmanWords[randomWord.toLowerCase()]).concat("\"");
-  console.log(tip)
+
 
   // Pre-Game Functions
 
@@ -236,7 +235,7 @@ $('document').ready( function() {
           setNewBestScore(score);
         }
       bestScoreBoard.html(bestScore)
-      $(".gameoff").css("display", "block");
+      $(".gamelost").css("display", "block");
       $(".gameon").css("display", "none");
       $(".word_revealed").html("The word was: ".concat(randomWord.toUpperCase()));
     };
@@ -247,7 +246,7 @@ $('document').ready( function() {
   // Post-Game Functions
 
   function repeatEverything(gameCondition) {
-    $(".gameoff").css("display", "none");
+    $(".gamelost").css("display", "none");
     $(".gamewon").css("display", "none");
     $(".gameon").css("display", "block");
     chances = 5;

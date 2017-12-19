@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+div {
+  text-align: center;
+  margin: 0;
+}
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -14,7 +19,7 @@ body {
 
 #left_column, #right_column {
   flex: 1;
-  background-color: #F24D3B;
+  background-color: #A12222;
 }
 
 #game_wrapper {
@@ -47,11 +52,11 @@ body {
   display: none;
 }
 
-.gameoff {
+.gamelost {
   display: none;
 }
 
-.gamewon > p, .gameoff > p {
+.gamewon > p, .gamelost > p {
   margin: 2em;
 }
 
@@ -65,11 +70,6 @@ body {
   flex: 2;
   flex-basis: 60%;
   padding: 2em;
-}
-
-div {
-  text-align: center;
-  margin: 0;
 }
 
 h1 {
@@ -114,9 +114,7 @@ button {
   border: 0.1em solid black;
   padding: 1em;
   margin-top: 1em;
-
 }
-
 
 #tip {
   color: #FBB43A;
@@ -147,6 +145,6 @@ button {
   }
 
   #game_wrapper {
-    flex: 4;
+    flex: 8;
   }
 }
