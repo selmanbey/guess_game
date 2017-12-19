@@ -281,12 +281,26 @@ $('document').ready( function() {
     }
   });
 
-  // Mobile-Related Events
+
+  // Mobile-Related Events 
+  // (For Proper Display when Mobile Keyboard Appeard)
 
   $("input").focus(function () {
     var newHeight = $("body").height();
-    $("body").css("height", newHeight);
+    if (window.matchMedia("(max-height: 480px)").matches) {
+      $("#header").css("display", "none");
+      $("body").css("height", newHeight);
+      $("html").scrollTop();
+    } else {
+      var newHeight = $("body").height();
+      $("body").css("height", newHeight);
+    };
   });
 
-  
+  $("input").blur(function () {
+    if (window.matchMedia("(max-height: 480px)").matches) {
+      $("#header").css("display", "block");
+    };
+  });
+
 });
