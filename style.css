@@ -1,5 +1,4 @@
 body {
-  position: absolute;
   display: block;
   width: 100vw;
   height: 100vh;
@@ -146,5 +145,15 @@ button {
 
   #game_wrapper {
     flex: 8;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #left_column, #right_column {
+    flex: 0.5;
+  }
+
+  #game_wrapper {
+    flex: 10;
   }
 }
