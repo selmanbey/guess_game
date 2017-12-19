@@ -282,7 +282,7 @@ $('document').ready( function() {
   });
 
 
-  // Mobile-Related Events 
+  // Mobile-Related Events
   // (For Proper Display when Mobile Keyboard Appeard)
 
   $("input").focus(function () {
@@ -290,7 +290,7 @@ $('document').ready( function() {
     if (window.matchMedia("(max-height: 480px)").matches) {
       $("#header").css("display", "none");
       $("body").css("height", newHeight);
-      $("html").scrollTop();
+      $("html, body").scrollTop(0);
     } else {
       var newHeight = $("body").height();
       $("body").css("height", newHeight);
