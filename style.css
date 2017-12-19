@@ -1,25 +1,46 @@
 body {
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.wrapper {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
+  height: 100%;
+}
+
+#left_column, #right_column {
+  flex: 1;
+  background-color: #F24D3B;
+}
+
+#game_wrapper {
+  flex: 2;
+  background-color: white;
+  border-left: 0.2em solid black;
+  border-right: 0.2em solid black;
 }
 
 #header {
-  flex: 1;
-  flex-basis: 20%;
-  background-color: black;
-  color: white;
+  color: black;
   width: 100%;
-  margin-bottom: 2em;
 }
 
 #main {
-  flex: 2;
-  flex-basis: 80;
+  flex-basis: 80%;
 }
 
 .gameon {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.gamewon {
+  display: none;
 }
 
 .gamewon {
@@ -30,22 +51,45 @@ body {
   display: none;
 }
 
-div {
-  text-align: center;
+.gamewon > p, .gameoff > p {
+  margin: 2em;
 }
 
-#word_div {
+.upper_section {
+  flex: 1;
+  background-color: black;
+  padding: 2em;
+}
 
+.lower_section {
+  flex: 2;
+  flex-basis: 60%;
+  padding: 2em;
+}
+
+div {
+  text-align: center;
+  margin: 0;
 }
 
 h1 {
   font-family: 'VT323', monospace;
+  font-size: 4em;
+  color: #F49E33;
+  text-shadow: -0.02em 0 black, 0 0.02em black, 0.02em 0 black, 0 -0.02em black;
 }
 
 p {
   font-family: 'Quicksand', sans-serif;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0.2em;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+}
+
+.result {
+  padding: 3em;
+  color: #E73131;
 }
 
 input {
@@ -53,12 +97,41 @@ input {
   text-align: center;
   width: 1em;
   border: 0.1em solid;
+  margin: 1em 1em 0.2em 1em;
 }
 
 span {
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', sans-serif;
   font-size: 1.5em;
   font-weight: bold;
+}
+
+button {
+  background-color: #E73131;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8em;
+  color: white;
+  border: 0.1em solid black;
+  padding: 1em;
+  margin-top: 1em;
+
+}
+
+
+#tip {
+  color: #FBB43A;
+  font-weight: lighter;
+  font-size: 1em;
+  font-style: italic;
+}
+
+#word_board {
+  color: white;
+  margin-bottom: 2em;
+}
+
+#notification {
+  margin-bottom: 3em;
 }
 
 .score_board {
@@ -66,4 +139,14 @@ span {
   font-family: 'Quicksand';
   font-size: 1.5em;
   font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+  #left_column, #right_column {
+    flex: 1;
+  }
+
+  #game_wrapper {
+    flex: 4;
+  }
 }

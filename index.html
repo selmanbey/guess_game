@@ -11,40 +11,49 @@
   <link href="https://fonts.googleapis.com/css?family=Quicksand|VT323" rel="stylesheet">
 </head>
 <body>
-  <div id="header">
-    <h1>GUESS GAME</h1>
-  </div>
-  <div id="main">
-    <div class="gameon">
-      <div id="word_div">
-        <p id="word_board"></p>
+  <div class="wrapper">
+    <div id="left_column"></div>
+    <div id="game_wrapper">
+      <div id="header">
+        <h1>GUESS GAME</h1>
       </div>
-      <div id="chances_div">
-        <p>Chances Left: <span id="chances_board"></span></p>
-      <input type="text">
-      </div>
-      <div id="notification_div">
-        <p id="notification"></p>
-      </div>
-      <div id="score_div">
-        <p>Current Score: <span class="score_board"></span></p>
-        <p>Best Score So Far: <span class="best_score_board"></span></p>
+      <div id="main">
+        <div class="gameon">
+          <div class="upper_section">
+            <p id="word_board"></p>
+            <p id="tip"></p>
+          </div>
+          <div class="lower_section">
+            <!-- <div id="chances_div"> -->
+              <input type="text">
+            <!-- </div> -->
+            <!-- <div id="notification_div"> -->
+              <p id="notification"></p>
+              <p>Chances Left: <span id="chances_board"></span></p>
+            <!-- </div> -->
+            <!-- <div id="score_div"> -->
+              <p>Current Score: <span class="score_board"></span></p>
+              <p>Best Score So Far: <span class="best_score_board"></span></p>
+            <!-- </div> -->
+          </div>
+        </div>
+        <div class="gamewon">
+          <p class="result">YOU GOT IT!</p>
+          <p class="word_revealed"></p>
+          <p>Your current score is: <span class="score_board"></span></p>
+          <p>Best Score So Far: <span class="best_score_board"></span></p>
+          <button class="continue">CONTINUE?</button>
+        </div>
+        <div class="gameoff">
+          <p class="result">AH! YOU LOST!</p>
+          <p class="word_revealed"></p>
+          <p>Your score is: <span class="score_board"></span></p>
+          <p>Best Score So Far: <span class="best_score_board"></span></p>
+          <button class="restart">TRY AGAIN?</button>
+        </div>
       </div>
     </div>
-    <div class="gamewon">
-      <p>YAY! YOU GOT IT!</p>
-      <p class="word_revealed"></p>
-      <p>Your current score is: <span class="score_board"></span></p>
-      <p>Best Score So Far: <span class="best_score_board"></span></p>
-      <button class="continue">NEXT WORD PLEASE!</button>
-    </div>
-    <div class="gameoff">
-      <p id="gameover">AH! YOU LOST!</p>
-      <p class="word_revealed"></p>
-      <p>Your score is: <span class="score_board"></span></p>
-      <p>Best Score So Far: <span class="best_score_board"></span></p>
-      <button class="restart">WILL TRY AGAIN!</button>
-    </div>
+    <div id="right_column"></div>
   </div>
 </body>
 </html>
