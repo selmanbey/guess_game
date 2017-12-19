@@ -281,4 +281,12 @@ $('document').ready( function() {
     }
   });
 
+  // Mobile-Related Events
+
+  $("input").focus(function () {
+    var newHeight = $("body").height();
+    $("body").css("height", newHeight);
+  });
+
+  
 });
