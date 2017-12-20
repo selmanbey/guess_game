@@ -125,17 +125,18 @@ button {
 
 #word_board {
   color: white;
-  margin-bottom: 2em;
+  margin-bottom: 1.2em;
+  font-size: 1.3em;
 }
 
 #notification {
+  color: #E73131;
   margin-bottom: 3em;
 }
 
 .score_board {
   color: black;
   font-family: 'Quicksand';
-  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -157,4 +158,32 @@ button {
   #game_wrapper {
     flex: 10;
   }
+}
+
+@media screen and (max-height: 640px) {
+  input {
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+
+  .lower_section {
+    padding: 1em;
+  }
+
+  #word_board {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+  }
+
+  #notification {
+    margin: 0.4em 0em 1em 0em;
+  }
+
+  span {
+    font-size: 1.2em;
+  }
+
 }
