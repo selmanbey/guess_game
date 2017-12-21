@@ -292,7 +292,7 @@ $('document').ready( function() {
     */
     if (window.matchMedia("(max-height: 640px)").matches) {
       $("#header").css("display", "none");
-      $("body").css("height", window.innerHeight);
+      // $("body").css("height", window.innerHeight);
     }
   });
 
