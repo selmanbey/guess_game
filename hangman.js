@@ -1,4 +1,4 @@
-$('document').ready( function() {
+$(document).ready( function() {
 
 
   // Words List
@@ -285,30 +285,37 @@ $('document').ready( function() {
   // Mobile-Related Events
   // (For Proper Display when Mobile Keyboard Appears)
 
-  $("input").focus(function () {
-    /* Takes the header off to clear up space in low height mobile screens
-       so that the main game screen is still visible when the mobile keyboard
-       is up
-    */
-    if (window.matchMedia("(max-height: 640px)").matches) {
-      $("#header").css("display", "none");
-      // $("body").css("height", window.innerHeight);
-    }
-  });
+  // $("input").focus(function () {
+  //   /* Takes the header off to clear up space in low height mobile screens
+  //      so that the main game screen is still visible when the mobile keyboard
+  //      is up
+  //   */
+  //   if (window.matchMedia("(max-height: 640px)").matches) {
+  //     $("#header").css("display", "none");
+  //     $("body").css("height", window.innerHeight);
+  //   }
+  // });
+  //
+  // $("input").blur(function () {
+  //   if (window.matchMedia("(max-height: 640px)").matches) {
+  //     $("body").css("height", window.innerHeight)
+  //     $("#header").css("display", "block");
+  //   };
+  // // });
+  //
+  // window.addEventListener("mouseover", function() {
+  //   /* To ensure that elements will be displayed fully in game screen
+  //      even when user changes the screen size of the browser mid-game
+  //   */
+  //   $("body").css("height", window.innerHeight);
+  //   // $(".gameon").scrollTop(0);
+  // })
 
-  $("input").blur(function () {
-    if (window.matchMedia("(max-height: 640px)").matches) {
-      // $("body").css("height", window.innerHeight)
-      $("#header").css("display", "block");
-    };
-  });
-
-  window.addEventListener("mouseover", function() {
-    /* To ensure that elements will be displayed fully in game screen
-       even when user changes the screen size of the browser mid-game
-    */
+  $(window).resize( function refreshPageLook() {
     $("body").css("height", window.innerHeight);
-    // $(".gameon").scrollTop(0);
-  })
+  });
+
+
+
 
 });
