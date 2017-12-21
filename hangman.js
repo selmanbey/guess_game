@@ -313,6 +313,8 @@ $(document).ready( function() {
 
   $(window).resize( function refreshPageLook() {
     $("body").css("height", window.innerHeight);
+    if (window.matchMedia("(max-height: 640px)").matches) {
+        $("body").css("height", window.innerHeight)
   });
 
 
