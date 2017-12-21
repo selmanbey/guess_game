@@ -298,8 +298,8 @@ $('document').ready( function() {
 
   $("input").blur(function () {
     if (window.matchMedia("(max-height: 640px)").matches) {
-      $("#header").css("display", "block");
       $("body").css("height", window.innerHeight)
+      $("#header").css("display", "block");
     };
   });
 
