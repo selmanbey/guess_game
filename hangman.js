@@ -298,7 +298,7 @@ $('document').ready( function() {
 
   $("input").blur(function () {
     if (window.matchMedia("(max-height: 640px)").matches) {
-      $("body").css("height", window.innerHeight)
+      // $("body").css("height", window.innerHeight)
       $("#header").css("display", "block");
     };
   });
