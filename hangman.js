@@ -300,7 +300,8 @@ $(document).ready( function() {
     if (window.matchMedia("(max-height: 600px)").matches) {
       $("body").css("height", window.innerHeight)
       $("#header").css("display", "block");
-    });
+    };
+  });
 
   $(window).resize(function refreshPageLook() {
     $("body").css("height", window.innerHeight);
