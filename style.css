@@ -160,7 +160,7 @@ button {
   }
 }
 
-@media screen and (max-height: 640px) {
+@media screen and (max-height: 600px) {
   input {
     margin: 0;
   }
