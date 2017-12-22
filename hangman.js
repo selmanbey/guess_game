@@ -300,16 +300,7 @@ $(document).ready( function() {
     if (window.matchMedia("(max-height: 600px)").matches) {
       $("body").css("height", window.innerHeight)
       $("#header").css("display", "block");
-    };
-  });
-  //
-  // window.addEventListener("mouseover", function() {
-  //   /* To ensure that elements will be displayed fully in game screen
-  //      even when user changes the screen size of the browser mid-game
-  //   */
-  // //   $("body").css("height", window.innerHeight);
-  // //   // $(".gameon").scrollTop(0);
-  // // // })
+    });
 
   $(window).resize(function refreshPageLook() {
     $("body").css("height", window.innerHeight);
@@ -317,5 +308,4 @@ $(document).ready( function() {
         $("body").css("height", window.innerHeight)
       }
   });
-
 });
