@@ -1,5 +1,5 @@
 # guess game
-Browser-Based, Hangman-Style Word Guessing Game
+browser-based, hangman-style word buessing game
 
 (webscrape.py) parses vocabulary.com's top 1000 english words and their definitions as a global dictionary variable in (gamedict.js) 
 
